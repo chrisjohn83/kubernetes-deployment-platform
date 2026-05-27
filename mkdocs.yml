@@ -1,4 +1,5 @@
 site_name: Kubernets Deployment Platfrom
+site_url: https://chrisjohn83.github.io/kubernetes-deployment-platform/
 theme:
   name: material
 
