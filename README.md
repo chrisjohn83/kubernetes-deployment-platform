@@ -16,17 +16,9 @@ The platform documentation provides guidance for:
 
 The documentation site is published using **GitHub Pages** and generated with **MkDocs**.
 
-Access Documentation
-
-## Technology Stack
-* Component	Technology
-* Documentation Framework	MkDocs
-* Theme	Material for MkDocs
-* Hosting	GitHub Pages
-* CI/CD	GitHub Actions
-* Diagram Support	Mermaid
-* Content Format	Markdown
-* Local Development Setup
+## GitHub Repository:
+The documentation site is hosted using GitHub Pages.
+https://github.com/chrisjohn83/kubernetes-deployment-platform
 
 ## Prerequisites
 Install:
@@ -37,12 +29,17 @@ Install:
 * Clone Repository
 * Install Dependencies
 
-### Mermaid Diagram Support
-This documentation platform supports Mermaid diagrams for visualizing:
+## Technology Stack
+* Documentation Framework	MkDocs
+* Theme	Material for MkDocs
+* Hosting	GitHub Pages
+* CI/CD	GitHub Actions
+* Diagram Support	Mermaid
+* Content Format	Markdown
+* Local Development Setup
 
-## GitHub Repository:
-The documentation site is hosted using GitHub Pages.
-https://github.com/chrisjohn83/kubernetes-deployment-platform
+## Prototype Notice
+This platform is currently a prototype implementation intended for demonstration and developer onboarding purposes.
 
 Future Enhancements
 
