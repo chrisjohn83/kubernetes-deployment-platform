@@ -17,7 +17,6 @@ nav:
 markdown_extensions:
   - pymdownx.superfences
   - admonition
-  - pymdownx.superfences
   - pymdownx.highlight
   - tables
 
