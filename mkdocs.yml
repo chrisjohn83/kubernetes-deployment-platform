@@ -10,5 +10,5 @@ nav:
   - CICD Pipelines: 04-cicd-pipelines.md
   - Auto Scaling: 05-autoscaling.md
   - Monitoring: 06-monitoring.md
-  - 07-rollbacks.md: 07-rollbacks.md
+  - Rollbacks: 07-rollbacks.md
   - Secrets Management: 08-secrets-management.md
