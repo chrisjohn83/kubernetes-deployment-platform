@@ -1,1 +1,14 @@
-site_name: My Docs
+site_name: Kubernets Deployment Platfrom
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Getting Started: 01-quick-start-guide.md
+  - Cluster Setup: 02-cluster-setup.md
+  - Helm Charts: 03-helm-charts.md
+  - CICD Pipelines: 04-cicd-pipelines.md
+  - Auto Scaling: 05-autoscaling.md
+  - Monitoring: 06-monitoring.md
+  - 07-rollbacks.md: 07-rollbacks.md
+  - Secrets Management: 08-secrets-management.md
