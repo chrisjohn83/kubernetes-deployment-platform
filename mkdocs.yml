@@ -13,3 +13,13 @@ nav:
   - Monitoring: 06-monitoring.md
   - Rollbacks: 07-rollbacks.md
   - Secrets Management: 08-secrets-management.md
+
+markdown_extensions:
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - tables
+
+extra_javascript:
+  - https://unpkg.com/mermaid/dist/mermaid.min.js

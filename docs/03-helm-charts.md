@@ -39,6 +39,32 @@ helm install <release-name> kdp/microservice \
   --values values.yaml
 ```
 
+## Deployment Diagram
+```mermaid
+graph TD
+
+A[Developer Pushes Code]
+--> B[GitHub Repository]
+
+B --> C[GitHub Actions CI/CD]
+
+C --> D[Build Docker Image]
+
+D --> E[Push Image to Container Registry]
+
+E --> F[Deploy to Kubernetes Cluster]
+
+F --> G[Kubernetes Deployment]
+
+G --> H[Pods Created]
+
+H --> I[Service Exposure]
+
+I --> J[Ingress Controller]
+
+J --> K[Application Accessible]
+```
+
 A minimal `values.yaml` for the `microservice` chart:
 
 ```yaml
