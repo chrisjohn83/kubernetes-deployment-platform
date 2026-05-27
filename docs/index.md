@@ -12,4 +12,3 @@ Welcome to the Kubernet deployment platform.
 - Monitoring
 - Rollback
 - Secrets management
-
