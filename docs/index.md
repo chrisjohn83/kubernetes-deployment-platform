@@ -10,5 +10,5 @@ Welcome to the Kubernet deployment platform.
 - CICD pipelines
 - Auto scaling
 - Monitoring
-- Rollback
+- Rollbacks
 - Secrets management
