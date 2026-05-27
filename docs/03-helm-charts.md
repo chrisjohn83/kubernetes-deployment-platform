@@ -39,64 +39,31 @@ helm install <release-name> kdp/microservice \
   --values values.yaml
 ```
 
-## Deployment Diagram
+## Helm Chart Deployment
+
 ```mermaid
 graph TD
 
-A[Developer Pushes Code]
+A[Developer Commit]
 --> B[GitHub Repository]
 
-B --> C[GitHub Actions CI/CD]
+B --> C[GitHub Actions]
 
-C --> D[Build Docker Image]
+C --> D[Docker Build]
 
-D --> E[Push Image to Container Registry]
+D --> E[Push to Registry]
 
-E --> F[Deploy to Kubernetes Cluster]
+E --> F[Helm Upgrade]
 
 F --> G[Kubernetes Deployment]
 
-G --> H[Pods Created]
+G --> H[ReplicaSet]
 
-H --> I[Service Exposure]
+H --> I[Pods Running]
 
-I --> J[Ingress Controller]
-
-J --> K[Application Accessible]
+I --> J[Ingress Access]
 ```
 
-A minimal `values.yaml` for the `microservice` chart:
-
-```yaml
-image:
-  repository: registry.internal.example.com/my-team/my-service
-  tag: "1.2.0"
-  pullPolicy: IfNotPresent
-
-replicaCount: 2
-
-service:
-  port: 8080
-  protocol: TCP
-
-resources:
-  requests:
-    cpu: "100m"
-    memory: "128Mi"
-  limits:
-    cpu: "500m"
-    memory: "512Mi"
-
-ingress:
-  enabled: true
-  host: my-service.internal.example.com
-
-env:
-  LOG_LEVEL: info
-  APP_ENV: production
-```
-
----
 
 ## Upgrading a Release
 
