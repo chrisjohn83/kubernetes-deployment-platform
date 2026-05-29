@@ -1,7 +1,6 @@
 name: MkDocs CI/CD Pipeline
 
 ```text
- # .github/workflow/deploy.yaml'
  name: Build and Deploy
 
 on:
