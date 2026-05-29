@@ -8,7 +8,7 @@
 
 The platform integrates with GitHub Actions and GitLab CI out of the box. The recommended pipeline pattern is:
 
-```text
+```bash
 build → test → push image → deploy to dev → promote to staging → promote to production
 ```
 
@@ -20,6 +20,7 @@ The platform provides reusable workflow actions published at `kdp-actions/deploy
 
 ```yaml
 # .github/workflows/deploy.yml
+
 name: Build and Deploy
 
 on:
@@ -90,16 +91,24 @@ build:
 deploy-dev:
   stage: deploy-dev
   script:
-    - kdp-cli deploy --cluster dev-us-east-1 --namespace my-team-dev
-        --release my-service --image-tag $CI_COMMIT_SHA
+    - >
+      kdp-cli deploy
+      --cluster dev-us-east-1
+      --namespace my-team-dev
+      --release my-service
+      --image-tag $CI_COMMIT_SHA
   only:
     - main
 
 deploy-prod:
   stage: deploy-prod
   script:
-    - kdp-cli deploy --cluster prod-us-east-1 --namespace my-team-prod
-        --release my-service --image-tag $CI_COMMIT_SHA
+    - >
+      kdp-cli deploy
+      --cluster dev-us-east-1
+      --namespace my-team-dev
+      --release my-service
+      --image-tag $CI_COMMIT_SHA
   when: manual
   only:
     - main
