@@ -12,13 +12,15 @@ Secrets are managed through **HashiCorp Vault** (for storage and rotation) and s
 
 ## How It Works
 
-```
+---
+
 Vault (source of truth)
     ↓  External Secrets Operator syncs on schedule
 Kubernetes Secret (native)
     ↓  Referenced by pod spec
 Running Pod (env var or volume mount)
-```
+
+---
 
 1. A secret is stored in Vault at a well-known path.
 2. An `ExternalSecret` resource in your namespace declares which Vault path to fetch.
@@ -41,9 +43,10 @@ vault kv put secret/my-team/my-service/prod \
 
 Vault paths follow the convention:
 
-```
+'''
 secret/<team>/<service>/<environment>
-```
+
+'''
 
 ---
 

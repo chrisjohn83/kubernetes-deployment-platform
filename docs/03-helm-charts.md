@@ -22,7 +22,7 @@ helm repo update
 ## Available Charts
 
 | Chart | Description |
-|-------|-------------|
+| ------- | ------------- |
 | `kdp/microservice` | Stateless HTTP/gRPC microservice (Deployment + Service + HPA) |
 | `kdp/worker` | Background job worker (Deployment, no ingress) |
 | `kdp/cronjob` | Scheduled batch job |
@@ -63,7 +63,6 @@ H --> I[Pods Running]
 
 I --> J[Ingress Access]
 ```
-
 
 ## Upgrading a Release
 

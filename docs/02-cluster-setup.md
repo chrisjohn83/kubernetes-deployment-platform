@@ -13,7 +13,7 @@ The platform manages one or more Kubernetes clusters provisioned on your cloud p
 ## Cluster Tiers
 
 | Tier | Purpose | Node Size | Autoscaling |
-|------|---------|-----------|-------------|
+| ------ | --------- | ----------- | ------------- |
 | `dev` | Development & testing | 2–4 nodes, 4 vCPU / 16 GB | Off |
 | `staging` | Pre-production validation | 3–8 nodes, 8 vCPU / 32 GB | On |
 | `prod` | Live production workloads | 5–20 nodes, 16 vCPU / 64 GB | On |
@@ -49,10 +49,12 @@ kubectl cluster-info               # confirm connection
 
 Teams are allocated one namespace per cluster tier:
 
-```
+```bash
+
 <team-name>-dev
 <team-name>-staging
 <team-name>-prod
+
 ```
 
 Resource quotas are applied at the namespace level. To view your current quota:
@@ -80,7 +82,7 @@ spec:
 Access is role-based. Default roles are:
 
 | Role | Permissions |
-|------|-------------|
+| ------ | ------------- |
 | **viewer** | Read-only access to namespace resources |
 | **developer** | Deploy, scale, and read logs within the namespace |
 | **admin** | Full namespace control, including secrets |

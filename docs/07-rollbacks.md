@@ -18,11 +18,12 @@ helm history my-service -n my-team-prod
 
 Example output:
 
-```
+```bash
 REVISION  UPDATED                   STATUS     CHART               APP VERSION  DESCRIPTION
 1         2026-05-01 09:12:00 UTC   superseded microservice-2.4.1  1.0.0        Install complete
 2         2026-05-15 14:30:00 UTC   superseded microservice-2.4.1  1.1.0        Upgrade complete
 3         2026-05-26 11:00:00 UTC   deployed   microservice-2.4.1  1.2.0        Upgrade complete
+
 ```
 
 ---

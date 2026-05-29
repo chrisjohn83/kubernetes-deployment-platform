@@ -9,7 +9,7 @@
 The platform ships with a pre-configured observability stack:
 
 | Tool | Purpose | Internal URL |
-|------|---------|-------------|
+| ------ | --------- | ------------- |
 | **Prometheus** | Metrics collection & alerting | `https://prometheus.<cluster>.internal.example.com` |
 | **Grafana** | Dashboards & visualisation | `https://grafana.<cluster>.internal.example.com` |
 | **Loki** | Log aggregation (via Grafana) | Available as a data source within Grafana |
@@ -26,8 +26,8 @@ The platform expects services to expose Prometheus metrics on `/metrics` at the 
 # values.yaml — kdp/microservice chart
 metrics:
   enabled: true
-  port: 8080
-  path: /metrics
+    port: 8080
+    path: /metrics
 ```
 
 ### Annotate Your Pod Spec Directly
@@ -47,7 +47,7 @@ metadata:
 The platform team maintains a dashboard library. Import from the Grafana UI under **Dashboards → Browse → KDP Library**:
 
 | Dashboard | Description |
-|-----------|-------------|
+| ----------- | ------------- |
 | **KDP: Service Overview** | Request rate, error rate, latency (RED metrics) |
 | **KDP: JVM / Node.js Runtime** | Heap, GC, event loop metrics |
 | **KDP: Pod Resources** | CPU/memory usage vs. limits |

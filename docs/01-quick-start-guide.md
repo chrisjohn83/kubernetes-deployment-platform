@@ -82,7 +82,7 @@ Your service is live once all pods show `Running` status.
 ## Next Steps
 
 | Topic | File |
-|-------|------|
+| ------- | ------ |
 | Cluster Setup | `02-cluster-setup.md` |
 | Helm Charts | `03-helm-charts.md` |
 | CI/CD Pipelines | `04-cicd-pipelines.md` |
