@@ -1,4 +1,4 @@
-name: MkDocs CI/CD Pipeline
+
 
 ```yaml
 name: Build and Deploy
