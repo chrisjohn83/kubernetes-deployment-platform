@@ -24,9 +24,11 @@ name: Build and Deploy
 
 on:
   push:
-    branches: [main]
+    branches: 
+      - main
   pull_request:
-    branches: [main]
+    branches: 
+      - main
 
 jobs:
   build-and-test:
@@ -50,9 +52,9 @@ jobs:
       namespace: my-team-dev
       release: my-service
       chart: kdp/microservice
-      image_tag: ${{ github.sha }}
+      image_tag: "${{ github.sha }}"
     secrets:
-      KUBECONFIG: ${{ secrets.KDP_DEV_KUBECONFIG }}
+      KUBECONFIG: "${{ secrets.KDP_DEV_KUBECONFIG }}"
 
   deploy-prod:
     needs: deploy-dev
@@ -63,9 +65,9 @@ jobs:
       namespace: my-team-prod
       release: my-service
       chart: kdp/microservice
-      image_tag: ${{ github.sha }}
+      image_tag: "${{ github.sha }}"
     secrets:
-      KUBECONFIG: ${{ secrets.KDP_PROD_KUBECONFIG }}
+      KUBECONFIG: "${{ secrets.KDP_PROD_KUBECONFIG }}"
 ```
 
 ---
