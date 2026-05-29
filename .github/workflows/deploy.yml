@@ -1,7 +1,7 @@
 name: MkDocs CI/CD Pipeline
 
-```text
- name: Build and Deploy
+```yaml
+name: Build and Deploy
 
 on:
   push:
@@ -28,7 +28,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.12
+          python-version: "3.12"
 
       - name: Install Dependencies
         run: |
@@ -76,7 +76,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.12
+          python-version: "3.12"
 
       - name: Install MkDocs
         run: |
@@ -87,8 +87,5 @@ jobs:
       - name: Deploy Documentation
         run: |
           mkdocs gh-deploy --force
-  
-   build-and-test:
-     runs-on: ubuntu-latest
 
 ```
