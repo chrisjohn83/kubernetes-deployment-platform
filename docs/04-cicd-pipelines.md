@@ -8,7 +8,7 @@
 
 The platform integrates with GitHub Actions and GitLab CI out of the box. The recommended pipeline pattern is:
 
-```
+```text
 build → test → push image → deploy to dev → promote to staging → promote to production
 ```
 
