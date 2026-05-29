@@ -1,6 +1,4 @@
 
-
-```yaml
 name: Build and Deploy
 
 on:
@@ -87,5 +85,3 @@ jobs:
       - name: Deploy Documentation
         run: |
           mkdocs gh-deploy --force
-
-```
