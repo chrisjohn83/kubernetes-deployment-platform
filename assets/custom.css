@@ -1,0 +1,83 @@
+/* Homepage Hero Styling */
+
+.md-typeset h1 {
+    font-weight: 700;
+}
+
+/* Improve card appearance */
+
+.md-typeset .grid.cards > ul > li {
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+    transform: translateY(-3px);
+}
+
+/* Navigation */
+
+.md-nav__title {
+    font-weight: 600;
+}
+
+/* Code Blocks */
+
+.highlight pre {
+    border-radius: 8px;
+}
+
+/* Tables */
+
+.md-typeset table:not([class]) {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Admonitions */
+
+.md-typeset .admonition {
+    border-radius: 8px;
+}
+
+.md-typeset .admonition.note {
+    border-left: 4px solid #2196f3;
+}
+
+.md-typeset .admonition.tip {
+    border-left: 4px solid #4caf50;
+}
+
+.md-typeset .admonition.warning {
+    border-left: 4px solid #ff9800;
+}
+
+.md-typeset .admonition.danger {
+    border-left: 4px solid #f44336;
+}
+
+.md-typeset a {
+    font-weight: 500;
+}
+
+.hero-banner {
+    padding: 2rem;
+    margin: 1rem 0 2rem 0;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Mermaid diagrams */
+
+.mermaid {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Footer */
+
+.md-footer {
+    font-size: 0.85rem;
+}
