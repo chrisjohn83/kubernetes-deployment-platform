@@ -1,7 +1,24 @@
-site_name: Kubernets Deployment Platfrom
+site_name: Kubernetes Deployment Platform
 site_url: https://chrisjohn83.github.io/kubernetes-deployment-platform/
+
 theme:
   name: material
+  logo: assets/logo.png
+
+  palette:
+    - scheme: default
+      primary: blue
+      accent: cyan
+
+    - scheme: slate
+      primary: blue
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+extra_css:
+  - assets/custom.css
 
 nav:
   - Home: index.md
@@ -20,8 +37,8 @@ markdown_extensions:
   - toc:
       permalink: true
   - pymdownx.details
-  -  pymdownx.tabbed:
-       alternate_style: true
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -30,3 +47,7 @@ markdown_extensions:
 
 extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+
+copyright: >
+  © 2026 Kubernetes Deployment Platform |
+  Documentation Prototype by Chris Johnjoseph
