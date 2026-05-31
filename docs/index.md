@@ -2,9 +2,8 @@
 
 <div class="hero-banner">
 
-Welcome to the Kubernet deployment platform.
-
 Enterprise-style Kubernetes deployment workflows using GitHub Actions, Helm, and GitOps practices.
+
 </div>
 
 ## Features
@@ -21,17 +20,28 @@ Enterprise-style Kubernetes deployment workflows using GitHub Actions, Helm, and
 ## Architecture
 
 ```mermaid
+
 graph TD
 
-A[Developer]
---> B[GitHub Repository]
+A[Developer Commit] --> B[GitHub Repository]
 
-B --> C[GitHub Actions]
+B --> C[GitHub Actions CI/CD]
 
-C --> D[Build Container]
+C --> D[Build Docker Image]
 
-D --> E[Container Registry]
+D --> E[Push Image to Registry]
 
-E --> F[Helm Deployment]
+E --> F[Helm Upgrade]
 
-F --> G[Kubernetes Cluster]
+F --> G[Kubernetes Deployment]
+
+G --> H[ReplicaSet]
+
+H --> I[Pods Running]
+
+I --> J[Service]
+
+J --> K[Ingress]
+
+K --> L[Application Available]
+```
