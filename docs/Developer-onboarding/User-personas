@@ -1,0 +1,242 @@
+# Who This Guide Is For
+
+SmartTouch serves multiple types of users, each with different responsibilities, permissions, and API access levels. Understanding your role helps you determine which endpoints you can access and which workflows are available to you.
+
+## Home Owners
+
+You can use Your mobile or a web application to  control and monitor connected devices.
+
+### Home Owner User Journey Flow
+
+![Home-owner-user journery]
+(C:\Users\chris\Kubernet-Deployment\Github\kubernetes-deployment-platform\docs\Developer-onboarding\assets\Home-owner.png)
+
+#### User permissions
+
+* View registered devices
+* Check device status
+* Send commands to devices
+* Monitor smart home activities
+
+#### User Journey
+
+Home owner users' journey includes the following activities:
+
+1. Use to authenticate using username and password.
+2. Retrieve available devices.
+3. Send commands to authorized devices.
+4. Monitor command execution status.
+
+#### Use Cases
+
+Home Owner users can perform the following use cases with SmartTouch.
+
+* Open a smart gate
+* Monitor application status
+* Control connected devices remotely
+
+## Platform Administrators
+
+A SmartTouch Administrator (Smart Home Installer or Platform Administrator) is responsible for deploying, configuring, securing, and maintaining the SmartTouch platform. Administrators manage devices, onboard users, provision integrations, and ensure the platform remains operational and secure.
+
+This user journey illustrates the typical workflow followed by an administrator from initial setup through ongoing platform management.
+
+```mermaid
+Install Platform
+       │
+       ▼
+Configure Security
+       │
+       ▼
+Register Devices
+       │
+       ▼
+Onboard Users
+       │
+       ▼
+Validate Authentication
+       │
+       ▼
+Test Device Control
+       │
+       ▼
+Provision Integrations
+       │
+       ▼
+Deploy to Production
+       │
+       ▼
+Operate and Maintain
+
+```
+
+### Key Administrator Journey Stages
+
+1. Platform Installation and Configuration
+    * Install SmartTouch services
+    * Configure application settings
+    * Generate and configure JWT secret keys
+    * Deploy the API locally, on-premises, or in kubernetes
+    * Verfiy system health
+2. Device Configuration
+    * Discover devices
+    * Register devices in the platform
+    * Assign device identifiers
+3. User Onboarding
+    * Create user accounts - POST/users
+    * Generate secure passwords - PATCH/users/{id}
+    * Assign roles and permissions - DELETE/users/{id}
+    * Distribute credentials securely
+4. Security Validation
+    * Test authentication.
+    * Validate JWT generation.
+    * Verify authorization rules.
+    * Review user permissions.
+    * Rotate secrets if necessary.
+5. Functional Testing
+    * Authenticate as a user.
+    * Retrieve device inventory.
+    * Execute test commands.
+    * Review responses and logs.
+6. Integration Provisioning
+    * Create service accounts.
+    * Generate secure credentials.
+    * Assign integration permissions.
+    * Validate API access.
+7. Production Deployment
+    * Configure Kubernetes secrets.
+    * Enable monitoring and logging.
+    * Configure backups.
+    * Implement user management services.
+    * Configure token refresh workflows.
+8. Ongoing Operations
+    * Create users
+    * Disable inactive users
+    * Reset credentials
+
+## Third-Party Developers
+
+A Third-Party Developer integrates external applications, services, and automation platforms with SmartTouch APIs. Their goal is to securely access SmartTouch resources, discover available devices, execute commands, and build value-added solutions such as mobile applications, voice assistants, dashboards, and automation workflows.
+
+This user journey outlines the typical steps a developer follows from receiving access credentials to deploying a production-ready integration.
+
+```mermaid
+Receive Credentials
+        │
+        ▼
+Review Documentation
+        │
+        ▼
+Authenticate
+        │
+        ▼
+Discover Devices
+        │
+        ▼
+Execute Test Command
+        │
+        ▼
+Build Integration
+        │
+        ▼
+Validate and Test
+        │
+        ▼
+Deploy to Production
+        │
+        ▼
+Monitor and Maintain
+```
+
+### Key Third-Party Developers Journey Stages
+
+1. Receive Integration Access - Obtain credentials and permissions required to access the SmartTouch platform. This ensures developer has valid credentials and has access to SmartTouch documentation.
+    * Receive service account credentials from the Platform Administrator.
+    * Review API documentation.
+    * Understand available devices and permissions.
+    * Identify integration requirements.
+    * Typical Deliverables
+    * Service account username
+    * Service account password
+    * API base URL
+    * Available scopes and permissions
+2. Understand Available APIs - Learn the SmartTouch API capabilities and identify required endpoints.
+    * Review authentication workflows.
+    * Explore available device APIs.
+    * Understand request and response models.
+    * Review command execution patterns.
+    * Common APIs
+3. Authenticate with SmartTouch - Generate a valid JWT access token.
+    * Submit service account credentials.
+    * Receive JWT access token.
+    * Configure token usage within the application.
+4. Discover Available Devices - Identify devices available to the integration.
+    * Retrieve device inventory.
+    * Store device identifiers.
+    * Determine supported device commands.
+5. Execute a Test Command - This validates end-to-end communication with SmartTouch.
+    * Select a test device.
+    * Send a command.
+    * Verify successful execution.
+6. Build the Integration - This develops application logic using SmartTouch APIs.
+    * Mobile Applications - Enable users to:
+        * View devices
+        * Control devices
+        * Monitor status
+    * Voice Assistants - Enable command such as:
+        * Open the gate
+    * Automation Platforms - Create workflow such as:
+        * Open gate when arriving home
+        * Start appliances on schedules
+        * Trigger actions based on events
+    * Dashboards
+        * Device monitoring
+        * Command execution
+        * Usage analytics
+7. Validate and Test
+    * Test authentication failures.
+    * Test invalid commands.
+    * Verify error handling.
+    * Simulate device unavailability.
+    * Perform end-to-end testing.
+
+8. Production Deployment
+    * Securely store credentials.
+    * Configure environment variables.
+    * Enable monitoring and logging.
+    * Deploy application infrastructure.
+    * Implement token refresh workflows.
+
+9. Ongoing Maintenance
+    * Monitor API Usage
+    * Track request volumes
+    * Monitor failures
+    * Review performance metrics
+
+## Estimated Setup Time
+
+Most developers can complete the onboarding process and execute their first device command in approximately **15 minutes**.
+
+## Onboarding Journey
+
+This guide is organized into the following steps:
+
+1. Understand SmartTouch user roles and permissions.
+2. Configure authentication and authorization.
+3. Create and manage user accounts.
+4. Start the SmartTouch API service.
+5. Obtain and validate access tokens.
+6. Send your first device command.
+7. Explore interactive API documentation.
+8. Onboard additional users and integrations.
+9. Prepare for production deployment.
+
+## Next Steps
+
+Continue to the following topics:
+
+* Authentication and Authorization
+* Quick Start Guide
+* Python SDK Examples
+* User Onboarding
+* Production Readiness

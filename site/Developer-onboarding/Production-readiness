@@ -1,0 +1,14 @@
+Production Readiness
+Limitations of the Development User Store
+
+Current implementation:
+
+In-memory storage
+Development only
+Recommended Production APIs
+User Lifecycle
+POST /users
+PATCH /users/{id}
+DELETE /users/{id}
+Token Management
+POST /auth/refresh
