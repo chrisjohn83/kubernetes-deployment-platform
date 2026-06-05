@@ -1,0 +1,22 @@
+# Quick Start
+
+Send your first device command in under 5 minutes.
+
+Prerequisites
+Python 3.10+
+SmartTouch source code
+Local environment configured
+
+Step 1: Install and Run
+cd SmartTouch
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+
+Step 2: Authenticate
+curl -X POST <http://localhost:8000/auth/token>
+Step 3: Discover Devices
+curl <http://localhost:8000/devices>
+Step 4: Send Your First Command
+curl -X POST <http://localhost:8000/devices/gate01/commands>
+Step 5: Explore Swagger UI
+<http://localhost:8000/docs>

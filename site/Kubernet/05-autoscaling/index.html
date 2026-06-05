@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://chrisjohn83.github.io/kubernetes-deployment-platform/Kubernet/05-autoscaling/">
       
       
+        <link rel="prev" href="../04-cicd-pipelines/">
       
-      <link rel="icon" href="/kubernetes-deployment-platform/assets/images/favicon.png">
+      
+        <link rel="next" href="../06-monitoring/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Kubernetes Deployment Platform</title>
+        <title>Auto Scaling - Kubernetes Deployment Platform</title>
       
     
     
-      <link rel="stylesheet" href="/kubernetes-deployment-platform/assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="/kubernetes-deployment-platform/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="/kubernetes-deployment-platform/assets/custom.css">
+      <link rel="stylesheet" href="../../assets/custom.css">
     
-    <script>__md_scope=new URL("/kubernetes-deployment-platform/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#autoscaling" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -81,9 +92,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/kubernetes-deployment-platform/." title="Kubernetes Deployment Platform" class="md-header__button md-logo" aria-label="Kubernetes Deployment Platform" data-md-component="logo">
+    <a href="../.." title="Kubernetes Deployment Platform" class="md-header__button md-logo" aria-label="Kubernetes Deployment Platform" data-md-component="logo">
       
-  <img src="/kubernetes-deployment-platform/assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -100,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Auto Scaling
             
           </span>
         </div>
@@ -200,9 +211,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/kubernetes-deployment-platform/." title="Kubernetes Deployment Platform" class="md-nav__button md-logo" aria-label="Kubernetes Deployment Platform" data-md-component="logo">
+    <a href="../.." title="Kubernetes Deployment Platform" class="md-nav__button md-logo" aria-label="Kubernetes Deployment Platform" data-md-component="logo">
       
-  <img src="/kubernetes-deployment-platform/assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     Kubernetes Deployment Platform
@@ -214,18 +225,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -241,7 +254,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Kubernet
@@ -255,7 +268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Kubernet/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -278,7 +291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Kubernet/01-quick-start-guide/" class="md-nav__link">
+      <a href="../01-quick-start-guide/" class="md-nav__link">
         
   
   
@@ -301,7 +314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Kubernet/02-cluster-setup/" class="md-nav__link">
+      <a href="../02-cluster-setup/" class="md-nav__link">
         
   
   
@@ -324,7 +337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Kubernet/03-helm-charts/" class="md-nav__link">
+      <a href="../03-helm-charts/" class="md-nav__link">
         
   
   
@@ -347,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Kubernet/04-cicd-pipelines/" class="md-nav__link">
+      <a href="../04-cicd-pipelines/" class="md-nav__link">
         
   
   
@@ -367,10 +380,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Kubernet/05-autoscaling/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Auto Scaling
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -381,6 +416,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#horizontal-pod-autoscaler-hpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Horizontal Pod Autoscaler (HPA)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Horizontal Pod Autoscaler (HPA)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-via-helm-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable via Helm Chart
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -393,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Kubernet/06-monitoring/" class="md-nav__link">
+      <a href="../06-monitoring/" class="md-nav__link">
         
   
   
@@ -416,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Kubernet/07-rollbacks/" class="md-nav__link">
+      <a href="../07-rollbacks/" class="md-nav__link">
         
   
   
@@ -439,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Kubernet/08-secrets-management/" class="md-nav__link">
+      <a href="../08-secrets-management/" class="md-nav__link">
         
   
   
@@ -507,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Developer-onboarding/" class="md-nav__link">
+      <a href="../../Developer-onboarding/" class="md-nav__link">
         
   
   
@@ -530,7 +618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Developer-onboarding/User-personas.md" class="md-nav__link">
+      <a href="../../Developer-onboarding/User-personas.md" class="md-nav__link">
         
   
   
@@ -553,7 +641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Developer-onboarding/Authentication.md" class="md-nav__link">
+      <a href="../../Developer-onboarding/Authentication.md" class="md-nav__link">
         
   
   
@@ -593,6 +681,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#horizontal-pod-autoscaler-hpa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Horizontal Pod Autoscaler (HPA)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Horizontal Pod Autoscaler (HPA)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-via-helm-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enable via Helm Chart
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -604,8 +735,109 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="autoscaling">Autoscaling<a class="headerlink" href="#autoscaling" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Prototype Notice:</strong> This platform is currently in prototype status. Features and APIs may change between releases.</p>
+</blockquote>
+<hr />
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The platform supports two autoscaling mechanisms:</p>
+<ul>
+<li><strong>Horizontal Pod Autoscaler (HPA)</strong> — scales the number of pod replicas</li>
+<li><strong>Vertical Pod Autoscaler (VPA)</strong> — right-sizes resource requests per pod</li>
+</ul>
+<p>Cluster-level node autoscaling is managed by the platform team and is enabled by default on staging and production clusters.</p>
+<hr />
+<h2 id="horizontal-pod-autoscaler-hpa">Horizontal Pod Autoscaler (HPA)<a class="headerlink" href="#horizontal-pod-autoscaler-hpa" title="Permanent link">&para;</a></h2>
+<p>HPA scales the number of pod replicas based on CPU utilisation, memory utilisation, or custom metrics.</p>
+<h3 id="enable-via-helm-chart">Enable via Helm Chart<a class="headerlink" href="#enable-via-helm-chart" title="Permanent link">&para;</a></h3>
+<p>```yaml</p>
+<h1 id="valuesyaml">values.yaml<a class="headerlink" href="#valuesyaml" title="Permanent link">&para;</a></h1>
+<p>autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 70
+  targetMemoryUtilizationPercentage: 80
+```</p>
+<h3 id="apply-directly-with-kubectl">Apply Directly with kubectl<a class="headerlink" href="#apply-directly-with-kubectl" title="Permanent link">&para;</a></h3>
+<p><code>bash
+kubectl autoscale deployment my-service \
+  --namespace my-team-prod \
+  --min=2 --max=10 \
+  --cpu-percent=70</code></p>
+<h3 id="check-hpa-status">Check HPA Status<a class="headerlink" href="#check-hpa-status" title="Permanent link">&para;</a></h3>
+<p><code>bash
+kubectl get hpa -n my-team-prod
+kubectl describe hpa my-service -n my-team-prod</code></p>
+<hr />
+<h2 id="custom-metrics-autoscaling-keda">Custom Metrics Autoscaling (KEDA)<a class="headerlink" href="#custom-metrics-autoscaling-keda" title="Permanent link">&para;</a></h2>
+<p>For scaling on application-specific metrics (e.g., queue depth, request latency), the platform integrates with <strong>KEDA</strong> (Kubernetes Event-driven Autoscaling).</p>
+<p><code>yaml
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: my-service-scaledobject
+  namespace: my-team-prod
+spec:
+  scaleTargetRef:
+    name: my-service
+  minReplicaCount: 1
+  maxReplicaCount: 20
+  triggers:
+    - type: prometheus
+      metadata:
+        serverAddress: http://prometheus.monitoring.svc:9090
+        metricName: http_requests_in_flight
+        threshold: "50"
+        query: sum(http_requests_in_flight{service="my-service"})</code></p>
+<hr />
+<h2 id="vertical-pod-autoscaler-vpa">Vertical Pod Autoscaler (VPA)<a class="headerlink" href="#vertical-pod-autoscaler-vpa" title="Permanent link">&para;</a></h2>
+<p>VPA automatically adjusts resource requests and limits based on observed usage. It is recommended for right-sizing during initial rollout.</p>
+<p><code>yaml
+apiVersion: autoscaling.k8s.io/v1
+kind: VerticalPodAutoscaler
+metadata:
+  name: my-service-vpa
+  namespace: my-team-prod
+spec:
+  targetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: my-service
+  updatePolicy:
+    updateMode: "Off"   # "Off" = recommendations only; "Auto" = live adjustment</code></p>
+<blockquote>
+<p><strong>Warning:</strong> Do not run HPA (on CPU/memory) and VPA in <code>Auto</code> mode simultaneously on the same deployment — they will conflict. Use HPA for replica count and VPA in <code>Off</code> mode for recommendations only.</p>
+</blockquote>
+<hr />
+<h2 id="autoscaling-tips">Autoscaling Tips<a class="headerlink" href="#autoscaling-tips" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Always set <code>minReplicas: 2</code> in production to ensure high availability during scale-down events.</li>
+<li>Set conservative <code>maxReplicas</code> limits to protect downstream dependencies and avoid runaway cost.</li>
+<li>Tune HPA cooldown periods with <code>--horizontal-pod-autoscaler-downscale-stabilization</code> if you see flapping.</li>
+<li>Check HPA events for scaling activity: <code>kubectl describe hpa my-service -n my-team-prod</code></li>
+</ul>
+<hr />
+<p><em>Documentation version: 0.1.0 — May 2026</em>
+<em>Maintained by the Platform Engineering team.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -645,10 +877,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/kubernetes-deployment-platform/", "features": [], "search": "/kubernetes-deployment-platform/assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/kubernetes-deployment-platform/assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       

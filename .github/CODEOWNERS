@@ -1,0 +1,8 @@
+# Documentation reviewers
+/docs/ @peer-reviewer
+
+# Technical reviewers
+/docs/Kubernet/ @technical-reviewer
+
+# Developer onboarding reviewers
+/docs/Developer-onboarding/ @technical-reviewer

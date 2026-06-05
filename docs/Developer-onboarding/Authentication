@@ -1,0 +1,36 @@
+# Authentication and Authorization
+
+Authentication Overview
+JWT-based authentication
+Access token flow
+Authorization model
+Step 1: Configure JWT Secret
+Local Development
+python -c "import secrets; print(secrets.token_hex(32))"
+export JWT_SECRET_KEY=<generated-key>
+Kubernetes Deployment
+kubectl create secret generic smarttouch-secrets \
+  --from-literal=jwt-secret-key=<generated-key>
+Step 2: Create User Accounts
+Generate Password Hash
+python -c "from passlib.context import CryptContext; print(CryptContext(schemes=['bcrypt']).hash('mypassword'))"
+Add User to Store
+_USERS["new_user"] = "$2b$12$..."
+Step 3: Start the API
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+Step 4: Obtain an Access Token
+curl -X POST http://localhost:8000/auth/token
+Step 5: Verify Authentication
+curl http://localhost:8000/devices
+Success Criteria
+Token generated
+Device list returned
+Role-Based Permissions
+Permissions Matrix
+Endpoint	Home Owner	Admin	Developer
+POST /auth/token	✓	✓	✓
+GET /devices	✓	✓	✓
+POST /devices/{id}/commands	✓	✓	✓
+POST /devices	✗	✓	Conditional
+DELETE /devices/{id}	✗	✓	Conditiona
