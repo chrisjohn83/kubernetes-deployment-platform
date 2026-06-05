@@ -1,0 +1,31 @@
+name: Documentation Review Workflow
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      - run: npx textlint "docs/**/*.md"
+
+  assign-reviewers:
+    needs: lint
+    runs-on: ubuntu-latest
+
+    permissions:
+      pull-requests: write
+
+    steps:
+      - name: Request reviewers
+        uses: kentaro-m/auto-assign-action@v2

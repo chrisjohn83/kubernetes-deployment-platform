@@ -1,0 +1,66 @@
+{
+  "name": "kubernetes-deployment-platform",
+  "version": "1.0.0",
+  "description": "This repository contains the source code and documentation for the Kubernetes Deployment Platform prototype documentation portal built using MkDocs and Material for MkDocs.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint-docs": "textlint docs/**/*.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisjohn83/kubernetes-deployment-platform.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/chrisjohn83/kubernetes-deployment-platform/issues"
+  },
+  "homepage": "https://github.com/chrisjohn83/kubernetes-deployment-platform#readme",
+  "devDependencies": {
+    "textlint": "^15.7.1",
+    "textlint-rule-en-capitalization": "^2.0.3",
+    "textlint-rule-no-todo": "^2.0.1",
+    "textlint-rule-sentence-length": "^5.2.1",
+    "textlint-rule-terminology": "^5.2.16"
+  },
+  "dependencies": {
+    "bail": "^1.0.5",
+    "boundary": "^2.0.0",
+    "ccount": "^1.1.0",
+    "comma-separated-tokens": "^1.0.8",
+    "escape-string-regexp": "^4.0.0",
+    "extend": "^3.0.2",
+    "hast-util-from-parse5": "^5.0.3",
+    "hast-util-parse-selector": "^2.2.5",
+    "hastscript": "^5.1.2",
+    "is-buffer": "^2.0.5",
+    "is-plain-obj": "^2.1.0",
+    "lodash.sortby": "^4.7.0",
+    "lodash.uniq": "^4.5.0",
+    "lodash.uniqwith": "^4.5.0",
+    "parse5": "^5.1.1",
+    "property-information": "^5.6.0",
+    "rehype-parse": "^6.0.2",
+    "sentence-splitter": "^5.0.1",
+    "space-separated-tokens": "^1.1.5",
+    "structured-source": "^4.0.0",
+    "textlint-rule-helper": "^2.5.0",
+    "textlint-util-to-string": "^3.3.4",
+    "trough": "^1.0.5",
+    "unified": "^8.4.2",
+    "unist-util-is": "^4.1.0",
+    "unist-util-stringify-position": "^2.0.3",
+    "unist-util-visit": "^2.0.3",
+    "unist-util-visit-parents": "^3.1.1",
+    "vfile": "^4.2.1",
+    "vfile-message": "^2.0.4",
+    "web-namespaces": "^1.1.4",
+    "xtend": "^4.0.2"
+  }
+}

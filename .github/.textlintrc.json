@@ -1,0 +1,15 @@
+{
+  "rules": {
+    "no-todo": true,
+    "sentence-length": {
+      "max": 120
+    }
+    "terminology": {
+      "terms": {
+        "Github": "GitHub",
+        "API Endpoint": "API endpoint",
+        "Kubernetes Cluster": "Kubernetes cluster"
+      }
+    }
+  }
+}

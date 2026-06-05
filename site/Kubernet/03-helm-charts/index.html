@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://chrisjohn83.github.io/kubernetes-deployment-platform/Kubernet/03-helm-charts/">
       
       
+        <link rel="prev" href="../02-cluster-setup/">
       
-      <link rel="icon" href="/kubernetes-deployment-platform/assets/images/favicon.png">
+      
+        <link rel="next" href="../04-cicd-pipelines/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Kubernetes Deployment Platform</title>
+        <title>Helm Charts - Kubernetes Deployment Platform</title>
       
     
     
-      <link rel="stylesheet" href="/kubernetes-deployment-platform/assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="/kubernetes-deployment-platform/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="/kubernetes-deployment-platform/assets/custom.css">
+      <link rel="stylesheet" href="../../assets/custom.css">
     
-    <script>__md_scope=new URL("/kubernetes-deployment-platform/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#helm-charts" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -81,9 +92,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/kubernetes-deployment-platform/." title="Kubernetes Deployment Platform" class="md-header__button md-logo" aria-label="Kubernetes Deployment Platform" data-md-component="logo">
+    <a href="../.." title="Kubernetes Deployment Platform" class="md-header__button md-logo" aria-label="Kubernetes Deployment Platform" data-md-component="logo">
       
-  <img src="/kubernetes-deployment-platform/assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -100,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Helm Charts
             
           </span>
         </div>
@@ -200,9 +211,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/kubernetes-deployment-platform/." title="Kubernetes Deployment Platform" class="md-nav__button md-logo" aria-label="Kubernetes Deployment Platform" data-md-component="logo">
+    <a href="../.." title="Kubernetes Deployment Platform" class="md-nav__button md-logo" aria-label="Kubernetes Deployment Platform" data-md-component="logo">
       
-  <img src="/kubernetes-deployment-platform/assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     Kubernetes Deployment Platform
@@ -214,18 +225,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -241,7 +254,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Kubernet
@@ -255,7 +268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Kubernet/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -278,7 +291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Kubernet/01-quick-start-guide/" class="md-nav__link">
+      <a href="../01-quick-start-guide/" class="md-nav__link">
         
   
   
@@ -301,7 +314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Kubernet/02-cluster-setup/" class="md-nav__link">
+      <a href="../02-cluster-setup/" class="md-nav__link">
         
   
   
@@ -321,10 +334,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Kubernet/03-helm-charts/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Helm Charts
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -335,6 +370,107 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-the-chart-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding the Chart Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Charts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-the-microservice-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploying the microservice Chart
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helm-chart-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Helm Chart Deployment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrading-a-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upgrading a Release
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listing-and-inspecting-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listing and Inspecting Releases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Charts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chart-versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chart Versioning
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -347,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Kubernet/04-cicd-pipelines/" class="md-nav__link">
+      <a href="../04-cicd-pipelines/" class="md-nav__link">
         
   
   
@@ -370,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Kubernet/05-autoscaling/" class="md-nav__link">
+      <a href="../05-autoscaling/" class="md-nav__link">
         
   
   
@@ -393,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Kubernet/06-monitoring/" class="md-nav__link">
+      <a href="../06-monitoring/" class="md-nav__link">
         
   
   
@@ -416,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Kubernet/07-rollbacks/" class="md-nav__link">
+      <a href="../07-rollbacks/" class="md-nav__link">
         
   
   
@@ -439,7 +575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Kubernet/08-secrets-management/" class="md-nav__link">
+      <a href="../08-secrets-management/" class="md-nav__link">
         
   
   
@@ -507,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Developer-onboarding/" class="md-nav__link">
+      <a href="../../Developer-onboarding/" class="md-nav__link">
         
   
   
@@ -530,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Developer-onboarding/User-personas.md" class="md-nav__link">
+      <a href="../../Developer-onboarding/User-personas.md" class="md-nav__link">
         
   
   
@@ -553,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/kubernetes-deployment-platform/Developer-onboarding/Authentication.md" class="md-nav__link">
+      <a href="../../Developer-onboarding/Authentication.md" class="md-nav__link">
         
   
   
@@ -593,6 +729,97 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-the-chart-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding the Chart Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Charts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploying-the-microservice-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploying the microservice Chart
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helm-chart-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Helm Chart Deployment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrading-a-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upgrading a Release
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listing-and-inspecting-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listing and Inspecting Releases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom Charts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chart-versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chart Versioning
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -604,8 +831,122 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="helm-charts">Helm Charts<a class="headerlink" href="#helm-charts" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Prototype Notice:</strong> This platform is currently in prototype status. Features and APIs may change between releases.</p>
+</blockquote>
+<hr />
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The platform provides a curated Helm chart library at <code>https://charts.internal.example.com</code>. These charts encapsulate best-practice Kubernetes resource configurations for common microservice patterns, so teams can deploy without writing raw YAML.</p>
+<hr />
+<h2 id="adding-the-chart-repository">Adding the Chart Repository<a class="headerlink" href="#adding-the-chart-repository" title="Permanent link">&para;</a></h2>
+<p><code>bash
+helm repo add kdp https://charts.internal.example.com
+helm repo update</code></p>
+<hr />
+<h2 id="available-charts">Available Charts<a class="headerlink" href="#available-charts" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Chart</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>kdp/microservice</code></td>
+<td>Stateless HTTP/gRPC microservice (Deployment + Service + HPA)</td>
+</tr>
+<tr>
+<td><code>kdp/worker</code></td>
+<td>Background job worker (Deployment, no ingress)</td>
+</tr>
+<tr>
+<td><code>kdp/cronjob</code></td>
+<td>Scheduled batch job</td>
+</tr>
+<tr>
+<td><code>kdp/postgres</code></td>
+<td>PostgreSQL with automated backups</td>
+</tr>
+<tr>
+<td><code>kdp/redis</code></td>
+<td>Redis cache with Sentinel</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="deploying-the-microservice-chart">Deploying the <code>microservice</code> Chart<a class="headerlink" href="#deploying-the-microservice-chart" title="Permanent link">&para;</a></h2>
+<p><code>bash
+helm install &lt;release-name&gt; kdp/microservice \
+  --namespace &lt;namespace&gt; \
+  --values values.yaml</code></p>
+<h2 id="helm-chart-deployment">Helm Chart Deployment<a class="headerlink" href="#helm-chart-deployment" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>graph TD
+
+A[Developer Commit]
+--&gt; B[GitHub Repository]
+
+B --&gt; C[GitHub Actions]
+
+C --&gt; D[Docker Build]
+
+D --&gt; E[Push to Registry]
+
+E --&gt; F[Helm Upgrade]
+
+F --&gt; G[Kubernetes Deployment]
+
+G --&gt; H[ReplicaSet]
+
+H --&gt; I[Pods Running]
+
+I --&gt; J[Ingress Access]</code></pre>
+<h2 id="upgrading-a-release">Upgrading a Release<a class="headerlink" href="#upgrading-a-release" title="Permanent link">&para;</a></h2>
+<p><code>bash
+helm upgrade &lt;release-name&gt; kdp/microservice \
+  --namespace &lt;namespace&gt; \
+  --values values.yaml \
+  --set image.tag=1.3.0</code></p>
+<hr />
+<h2 id="listing-and-inspecting-releases">Listing and Inspecting Releases<a class="headerlink" href="#listing-and-inspecting-releases" title="Permanent link">&para;</a></h2>
+<p><code>bash
+helm list -n my-team-prod                   # list all releases in a namespace
+helm status my-service -n my-team-prod      # status of a specific release
+helm get values my-service -n my-team-prod  # view effective values</code></p>
+<hr />
+<h2 id="custom-charts">Custom Charts<a class="headerlink" href="#custom-charts" title="Permanent link">&para;</a></h2>
+<p>Teams can maintain their own charts alongside the platform charts. Store custom charts in your Git repository under a <code>charts/</code> directory and reference them locally:</p>
+<p><code>bash
+helm install my-custom-service ./charts/my-custom-service \
+  --namespace my-team-dev \
+  --values ./charts/my-custom-service/values-dev.yaml</code></p>
+<hr />
+<h2 id="chart-versioning">Chart Versioning<a class="headerlink" href="#chart-versioning" title="Permanent link">&para;</a></h2>
+<p>Always pin chart versions in CI to avoid unexpected changes from upstream updates:</p>
+<p><code>bash
+helm install my-service kdp/microservice --version 2.4.1 ...</code></p>
+<p>Run <code>helm search repo kdp --versions</code> to see all available chart versions.</p>
+<hr />
+<p><em>Documentation version: 0.1.0 — May 2026</em>
+<em>Maintained by the Platform Engineering team.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -645,10 +986,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/kubernetes-deployment-platform/", "features": [], "search": "/kubernetes-deployment-platform/assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/kubernetes-deployment-platform/assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
